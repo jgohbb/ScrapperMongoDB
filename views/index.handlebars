@@ -6,15 +6,15 @@
     <a class="topbar-responsive-logo" href="#"><strong>NPR News Scraper</strong></a>
   </div>
   <div id="topbar-responsive" class="topbar-responsive-links">
-    <div class="top-bar-left">
+    <div class="top-bar-right">
       <ul class="menu simple vertical medium-horizontal">
         <li><a href="/">Home</a></li>
         <li><a href="/saved" id='saved-articles'>Saved Articles</a></li>
         <div class="button">
-            <li><a href="/scrape" id="scrape">Get News!</a></li>
+          <li><a href="/scrape" id="scrape">Get News!</a></li>
         </div>
         <div class="button" id="delete">
-            <li><a href="/delete-articles">Clear News!</a></li>
+          <li><a href="/delete-articles">Clear News!</a></li>
         </div>
       </ul>
     </div>
@@ -34,7 +34,6 @@
         {{#unless saved}}
           <div class="col-md-12">
             <div class="card animated fadeIn" data-id={{_id}} style="width: 300px;">
-
               <div class="reveal" id="cardModal{{_id}}" data-reveal>
                 <div class="note-container">
                   <p><button class="button expanded" id="show-notes" data-id={{_id}}>Show Note</button></p>
@@ -54,12 +53,15 @@
               {{#if note}}
                 <p>{{note.body}}</p>
               {{/if}}
-              <p><button class="button expanded" data-open="cardModal{{_id}}">Add Note</button></p>
-              <div class="button save-article" data-id="{{_id}}">
-                <span>Save</span>
+              {{!-- <p><button class="button expanded" data-open="cardModal{{_id}}">Add Note</button></p> --}}
+              <div class="button expanded" data-open="cardModal{{_id}}"><span>
+                Add Note</span>
+              </div>
+              <div class="button save-article" data-id="{{_id}}"><span>
+                Save</span>
               </div>
             </div>
-        </div>
+          </div>
         {{/unless}}
       {{/each}}
       {{else}}

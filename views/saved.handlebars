@@ -24,35 +24,35 @@
 
 <div class="container-md" id="saved-article-container">
     <div class="row">
-          {{#if articles}}
-            {{#each articles}}
-              {{#if saved}}
-                <div class="col-md-12">
-                  <div class="card animated fadeIn" style="width: 300px;">
-                    <div class="reveal" id="cardModal{{_id}}" data-reveal>
-                      <input class="titleinput" type="text" value="" placeholder="Enter Name">
-                      <input class="bodyinput" type="text" value="" placeholder="Enter Note">
-                      <div class="button" value="submit" id="savenote" data-id="{{_id}}" 
-                          data-close>Submit</div>
-                      <div class="button float-right" value="delete" id="deletenote" data-id="{{_id}}" 
-                          data-close>Delete</div>
-                      <button class="close-button" data-close aria-label="Close modal" type="button">
-                          <span aria-hidden="true">&times;</span>
-                      </button>
-                    </div>
-                    <div class="card-divider">
-                      <h4><a href="{{link}}" target="_blank">{{title}}</a></h4>
-                    </div>
-                    <p><button class="button expanded" data-open="cardModal{{_id}}">
-                      Add Note</button></p>
-                  </div>
-              </div>
-              {{/if}}
-            {{/each}}
-                {{else}}
-                <div class="empty-container title-container animated">
-                <h1>No articles saved!</h1>
+      {{#if articles}}
+        {{#each articles}}
+          {{#if saved}}
+            <div class="col-md-12">
+              <div class="card animated fadeIn" style="width: 300px;">
+                <div class="reveal" id="cardModal{{_id}}" data-reveal>
+                  <input class="titleinput" type="text" value="" placeholder="Enter Name">
+                  <input class="bodyinput" type="text" value="" placeholder="Enter Note">
+                  <div class="button" value="submit" id="savenote" data-id="{{_id}}" 
+                      data-close>Submit</div>
+                  <div class="button float-right" value="delete" id="deletenote" data-id="{{_id}}" 
+                      data-close>Delete</div>
+                  <button class="close-button" data-close aria-label="Close modal" type="button">
+                      <span aria-hidden="true">&times;</span>
+                  </button>
                 </div>
-          {{/if}}
+                <div class="card-divider">
+                  <h4><a href="{{link}}" target="_blank">{{title}}</a></h4>
+                </div>
+                <p><button class="button expanded" data-open="cardModal{{_id}}">
+                  Add Note</button></p>
+              </div>
           </div>
-      </div>
+          {{/if}}
+        {{/each}}
+            {{else}}
+            <div class="empty-container title-container animated">
+            <h1>No articles saved!</h1>
+            </div>
+      {{/if}}
+    </div>
+</div>
