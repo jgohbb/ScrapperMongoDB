@@ -27,6 +27,10 @@ const exphbs = require('express-handlebars');
 app.engine('handlebars', exphbs({defaultLayout:'main'}));
 app.set('view engine', 'handlebars');
 
+const routes = require('./routes');
+
+app.use(routes);
+
 // Connect to the Mongo DB
 let MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/nprHeadlines";
 mongoose.connect(MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true }, (error) => {
@@ -34,9 +38,7 @@ mongoose.connect(MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true 
 	else (console.log('mongoose error: ' + error));
 });
 
-const routes = require('./routes/index');
 
-app.use(routes);
 
 
 //var syncOptions = { force: false };
