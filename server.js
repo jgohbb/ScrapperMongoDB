@@ -38,6 +38,7 @@ const routes = require('./routes/index');
 
 app.use(routes);
 
+
 //var syncOptions = { force: false };
 
 app.listen(PORT, function() {
