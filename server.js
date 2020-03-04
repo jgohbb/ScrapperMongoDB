@@ -2,8 +2,8 @@ const express = require("express");
 const logger = require("morgan");
 const mongoose = require("mongoose");
 
-var axios = require("axios");
-var cheerio = require("cheerio");
+// var axios = require("axios");
+// var cheerio = require("cheerio");
 
 // Require all models
 
@@ -27,7 +27,7 @@ const exphbs = require('express-handlebars');
 app.engine('handlebars', exphbs({defaultLayout:'main'}));
 app.set('view engine', 'handlebars');
 
-const routes = require('./routes');
+const routes = require('./routes/api-routes');
 
 app.use(routes);
 
