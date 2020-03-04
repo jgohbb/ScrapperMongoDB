@@ -3,7 +3,7 @@
 Web app using Moongoose, Cheerio and MongoDB to provide you with the latest global news right at your finger tips. The source is from National Public Radio (NPR) and you have the ability to leave your thoughts, comments ir ideas in the note section. Enjoy!
 
 Click here to visit the live website:
-https://????.herokuapp.com/
+https://mongodb-scraper-jgoh.herokuapp.com/
 
 ## Table of Content
 + [Instructions](#instructions)

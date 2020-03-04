@@ -28,7 +28,7 @@ router.get("/scrape", function(req, res) {
             })
             .catch(function(err) {
                 console.log(err)
-                return res.json(err);
+                // return res.json(err);
             });
         });
         res.send('scrape complete. redirecting.')
@@ -37,7 +37,7 @@ router.get("/scrape", function(req, res) {
 
 // Articles from the db to handlebars.
 router.get("/", function(req, res) {
-    db.Article.find({}).limit(15)
+    db.Article.find({}).limit(20)
     .then(function(articles) {
     res.render('index', {articles})
     })
@@ -120,8 +120,6 @@ router.post("/articles/:id", function(req, res) {
       });
     }).then(noteArticle => res.json(noteArticle)).catch(err => console.log(err))
   });
-
-// AS OF TIME OF SUBMISSION, DELETE NOTE IS STILL NOT FUNCTIONING. I HAVE 10 HOURS TO FIGURE IT OUT. THE FOLLOWING CODE IS MY ATTEMPT AT IT, I WILL DELETE THIS NOTE WHEN IT IS COMPLETED.
 
 // delete single note
 router.delete("/deletenote/:id", function (req, res) {

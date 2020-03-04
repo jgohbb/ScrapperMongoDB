@@ -93,7 +93,7 @@ $(document).on("click", "#show-notes", function () {
       .then(function (data) {
         const noteID = data.note._id;
         const noteTitle = data.note.title;
-        const noteBody = data.note.title;
+        const noteBody = data.note.body;
         const newNote = $('<div class="note">')
             .attr("data-id", noteID)
             .append("<p>" + noteTitle)
