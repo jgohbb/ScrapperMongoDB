@@ -32,7 +32,7 @@ const routes = require('./routes/api-routes');
 app.use(routes);
 
 // Connect to the Mongo DB
-let MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/nprHeadlines";
+let MONGODB_URI = "mongodb://root:password1@ds157248.mlab.com:57248/heroku_44rt1c0l";
 mongoose.connect(MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true }, (error) => {
 	if (!error) {console.log("Connected!");}
 	else (console.log('mongoose error: ' + error));
