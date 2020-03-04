@@ -6,7 +6,8 @@ var axios = require("axios");
 var cheerio = require("cheerio");
 
 // Require all models
-const db = require("./models");
+
+// const db = require("./models");
 
 const PORT = process.env.PORT || 3000;
 
