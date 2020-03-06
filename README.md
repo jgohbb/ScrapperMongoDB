@@ -47,19 +47,23 @@ To get started you will need these applications:
 ## <a name="features"> Game Features </a>
 **Home Page** Instructions and create/login account.
 
-![Home](./public/img/###)
+![Home](./public/images/home.png)
 
 **Sign-Up Page** Create an encrypted account which will be stored in our database.
 
-![Register](./public/img/###)
+![Scrape News](./public/images/scrapeNews.png)
 
 **Log-In Page** - Log into game console
 
-![Login](./public/img/333)
+![Save News](./public/images/saveNews1.png)
 
-**Command Center Page** Command center page of user's account and current status.  
+**Saved Article Page** the article saved are populated in the save articcle page for easy reference.  
 
-![Command Center](./public/img/###)
+![Save News Page](./public/images/saveNews2.png)
+
+**Add Notes** clisking the "Add Note" button allow user to save or delete comments and notes to the server.  
+
+![Add Notes](./public/images/saveNews2.png)
 
 ## <a name="improvements"> Improvements </a>
 * Work-in-progress to add authentication etc.
