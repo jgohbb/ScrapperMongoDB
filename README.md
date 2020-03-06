@@ -8,7 +8,7 @@ https://mongodb-scraper-jgoh.herokuapp.com/
 ## Table of Content
 + [Instructions](#instructions)
 + [Technologies Used](#tecnologies)
-+ [Game Features](#features)
++ [Scraper Features](#features)
 + [Improvements](#improvements)
 + [creators](#contributors)
 
@@ -44,16 +44,16 @@ To get started you will need these applications:
 * **Cheerio** : parses markup and provides an API for traversing/manipulating the data structure.
 * **axios** : promise based HTTP client for the browser and node.js
 
-## <a name="features"> Game Features </a>
-**Home Page** Instructions and create/login account.
+## <a name="features"> Scraper Features </a>
+**Home Page** Home Page.
 
 ![Home](./public/images/home.png)
 
-**Sign-Up Page** Create an encrypted account which will be stored in our database.
+**Scrape News** To scrape news, click the "Get News!" button and this will retrieve the latest world news articles. You then have the options to retrive the artilce by cliking the link and this will take you to the article page. you can then go back to the home page to save the article for future reference. You can also add notes or comments to that article of interest.
 
 ![Scrape News](./public/images/scrapeNews.png)
 
-**Log-In Page** - Log into game console
+**Save articel** - Saving article b clicking the save button.
 
 ![Save News](./public/images/saveNews1.png)
 
