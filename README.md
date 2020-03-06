@@ -63,7 +63,7 @@ To get started you will need these applications:
 
 **Add Notes** clisking the "Add Note" button allow user to save or delete comments and notes to the server.  
 
-![Add Notes](./public/images/saveNews2.png)
+![Add Notes](./public/images/addNotes.png)
 
 ## <a name="improvements"> Improvements </a>
 * Work-in-progress to add authentication etc.
