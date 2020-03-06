@@ -5,7 +5,7 @@ var axios = require("axios");
 var cheerio = require("cheerio");
 
 // var db = require("./models/index.js");
-var db = require("../models/Note.js");
+var db = require("../models/Article.js");
 
 // NPR scrape route
 router.get("/scrape", function(req, res) {
