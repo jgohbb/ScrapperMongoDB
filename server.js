@@ -2,7 +2,6 @@ const express = require("express");
 const logger = require("morgan");
 const mongoose = require("mongoose");
 
-
 // Require all models
 // const db = require("./models");
 
@@ -21,23 +20,28 @@ app.use(express.json());
 // Make public a static folder
 app.use(express.static("public"));
 
-const exphbs = require('express-handlebars');
+const exphbs = require("express-handlebars");
 
-app.engine('handlebars', exphbs({defaultLayout:'main'}));
-app.set('view engine', 'handlebars');
+app.engine("handlebars", exphbs({ defaultLayout: "main" }));
+app.set("view engine", "handlebars");
 
-const routes = require('./routes/index');
+const routes = require("./routes/index");
 app.use(routes);
 
 // Connect to the Mongo DB
 let MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/nprHeadlines";
-mongoose.connect(MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true }, (error) => {
-	if (!error) {console.log("Connected!");}
-	else (console.log('mongoose error: ' + error));
-});
+mongoose.connect(
+  MONGODB_URI,
+  { useNewUrlParser: true, useUnifiedTopology: true },
+  error => {
+    if (!error) {
+      console.log("Connected!");
+    } else console.log("mongoose error: " + error);
+  }
+);
 
 //var syncOptions = { force: false };
 
 app.listen(PORT, function() {
-	console.log('listening on port ' + PORT);
+  console.log(`Listening on http://localhost:${PORT}`);
 });
